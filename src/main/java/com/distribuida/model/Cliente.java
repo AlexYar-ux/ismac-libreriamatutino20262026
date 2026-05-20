@@ -1,14 +1,25 @@
 package com.distribuida.model;
 
-public class Cliente {
+import jakarta.persistence.*;
 
-    //atributos
+@Entity
+@Table(name = "Cliente")
+public class Cliente {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id_cliente")
     private int idCliente;
+    @Column(name = "id_cedula")
     private String cedula;
+    @Column(name = "id_nombre")
     private String nombre;
+    @Column(name = "id_apellido")
     private String apellido;
+    @Column(name = "id_dirrecion")
     private String direccion;
+    @Column(name = "id_telefono")
     private String telefono;
+    @Column(name = "id_correo")
     private String correo;
 
     // constructor vacio
